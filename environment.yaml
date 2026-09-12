@@ -1,0 +1,27 @@
+name: env-renewind-neural-networks
+channels:
+  - conda-forge
+  - nvidia
+dependencies:
+  # Python
+  - python=3.12
+  - pip
+  
+
+  # CUDA runtime compatible with TF 2.18
+  - cuda-version=12.3
+  - cudnn=8.9
+
+  # Scientific stack (conda-forge builds are stable)
+  - numpy=1.26
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - ipykernel
+
+  # Install TensorFlow via pip (official wheel with GPU support)
+  - pip:
+    - tensorflow==2.18.0
+    - keras==3.5.0
